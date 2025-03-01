@@ -7,7 +7,7 @@ const Experience = () => {
   const experiences = [
     {
       company: "Accenture",
-      logo: "src/assets/accenture.png",  
+      logo: "/assets/accenture.png",  
       position: "Application Developer",
       location: "Hyderabad, India",
       duration: "Jul 2021 – Dec 2023",

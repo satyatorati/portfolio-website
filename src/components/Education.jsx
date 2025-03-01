@@ -5,7 +5,7 @@ const Education = () => {
     {
       degree: "Master of Science in Computer Science",
       university: "The State University of New York (SUNY), Buffalo, NY",
-      logo: "src/assets/ublogo.jpg", 
+      logo: "/assets/ublogo.jpg", 
       duration: "Jan 2024 – May 2025",
       gpa: "GPA: 3.48/4.0",
       coursework: [
@@ -18,7 +18,7 @@ const Education = () => {
     {
       degree: "Bachelor of Engineering in Computer Science",
       university: "Anil Neerukonda Institute of Technology and Sciences (ANITS), India",
-      logo: "src/assets/anitslogo.jpg", 
+      logo: "/assets/anitslogo.jpg", 
       duration: "Jun 2018 – May 2021",
       gpa: "GPA: 8.0/10.0",
       coursework: [
@@ -55,7 +55,6 @@ const Education = () => {
             {/* University Details with Logo */}
             <div className="flex justify-between items-center mb-4">
               <div className="flex items-center">
-                {/* University Logo */}
                 <img 
                   src={edu.logo} 
                   alt={edu.university} 
@@ -66,13 +65,13 @@ const Education = () => {
                   <p className="text-secondary">{edu.university}</p>
                 </div>
               </div>
-              {/* Dates & GPA on the Right */}
+      
               <p className="text-textSecondary text-right">
                 {edu.duration} <br /> {edu.gpa}
               </p>
             </div>
 
-            {/* Courses displayed in a single line */}
+    
             <p className="text-secondary font-medium">Relevant Coursework:</p>
             <p className="text-textSecondary">
               {edu.coursework.join(", ")}

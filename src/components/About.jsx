@@ -50,7 +50,7 @@ const About = () => {
           <div className="aspect-square bg-gray-300 rounded overflow-hidden relative z-10">
                 {/* Replace with your actual image */}
                 <img 
-                  src="src/assets/profilepic.jpeg" 
+                  src="/assets/profilepic.jpeg" 
                   alt="Your Photo" 
                   className="w-full h-full object-cover" 
                 />
