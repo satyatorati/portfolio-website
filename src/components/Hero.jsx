@@ -62,10 +62,10 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex space-x-6 mt-12"
         >
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-textSecondary hover:text-secondary transition-colors">
+          <a href="https://github.com/satyatorati" target="_blank" rel="noopener noreferrer" className="text-textSecondary hover:text-secondary transition-colors">
             <FiGithub size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/satya-torati-51a19428b" target="_blank" rel="noopener noreferrer" className="text-textSecondary hover:text-secondary transition-colors">
+          <a href="https://www.linkedin.com/in/satya-torati/" target="_blank" rel="noopener noreferrer" className="text-textSecondary hover:text-secondary transition-colors">
             <FiLinkedin size={24} />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-textSecondary hover:text-secondary transition-colors">

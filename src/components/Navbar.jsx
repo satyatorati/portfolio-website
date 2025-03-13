@@ -61,7 +61,7 @@ const Navbar = () => {
                 transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
               >
                 <a 
-                  href="/resume.pdf" 
+                  href="https://drive.google.com/file/d/1ka1Nko6kbRFffVASHWYgu5oRurtcAYRT/view?usp=sharing" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn-primary"

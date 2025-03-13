@@ -11,7 +11,7 @@ const Education = () => {
       coursework: [
         "Operating Systems",
         "Computer Security",
-        "Computer Vision",
+        "Data Models & Query Language",
         "Data Structures & Algorithms"
       ]
     },

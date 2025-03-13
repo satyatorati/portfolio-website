@@ -11,8 +11,8 @@ const Projects = () => {
       description: "A real-time messaging app supporting 500+ daily active users, enabling instant messaging, typing indicators, and online status tracking. Features JWT-based authentication with refresh token rotation and role-based access control.",
       image: "/assets/chatapp.png",
       tags: ["React", "Node.js", "Socket.io", "MongoDB", "Zustand"],
-      github: "https://github.com",
-      demo: "https://example.com",
+      github: "https://github.com/satyatorati/chat-app",
+      demo: "https://chat-app-6nvc.onrender.com/",
       category: "web"
     },
     {
@@ -20,8 +20,8 @@ const Projects = () => {
       description: "A bookstore platform with 1,000+ products and 200+ monthly transactions, featuring cart management and COD checkout. Includes an admin dashboard enabling CRUD operations, cutting admin task time by 40%.",
       image: "/assets/bookstore.png",
       tags: ["React", "Redux Toolkit", "Node.js", "Express", "MongoDB"],
-      github: "https://github.com",
-      demo: "https://example.com",
+      github: "https://github.com/satyatorati/book-store-frontend",
+      demo: "https://book-store-flax.vercel.app/",
       category: "web"
     },
     {
@@ -29,8 +29,8 @@ const Projects = () => {
       description: "A predictive model achieving 87% accuracy to identify high-risk churn customers using SVM and Random Forest algorithms. Includes a Flask REST API capable of handling 50+ requests/sec with asynchronous workers.",
       image: "/assets/churn.png",
       tags: ["Python", "Flask", "Machine Learning", "Docker", "MongoDB"],
-      github: "https://github.com",
-      demo: "https://example.com",
+      github: "https://github.com/satyatorati/Telecom-churn-prediction",
+      demo: "https://github.com/satyatorati/Telecom-churn-prediction",
       category: "ml"
     }
   ]
