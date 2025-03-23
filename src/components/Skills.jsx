@@ -13,12 +13,12 @@ const Skills = () => {
     {
       title: "Frontend",
       icon: <FiLayout size={24} />,
-      skills: ["JavaScript (ES6+)", "TypeScript", "React", "Redux Toolkit", "HTML5", "CSS3", "Tailwind CSS", "Zustand"]
+      skills: ["JavaScript (ES6+)", "React", "Redux", "HTML5", "CSS3", "Tailwind CSS"]
     },
     {
       title: "Backend",
       icon: <FiServer size={24} />,
-      skills: ["Node.js", "Express.js", "RESTful APIs", "Flask", "Microservices", "JWT", "Socket.io"]
+      skills: ["Node.js", "Express.js", "RESTful APIs", "Flask", "JWT", "Socket.io"]
     },
     {
       title: "Database",
@@ -28,17 +28,17 @@ const Skills = () => {
     {
       title: "Programming",
       icon: <FiCode size={24} />,
-      skills: ["JavaScript", "TypeScript", "Python", "Java", "SQL"]
+      skills: [ "Python", "Java","JavaScript", "SQL"]
     },
     {
       title: "DevOps",
       icon: <FiTool size={24} />,
-      skills: ["AWS EC2", "Docker", "CI/CD Pipelines", "Kubernetes", "Git", "Jenkins"]
+      skills: ["AWS EC2", "Docker", "CI/CD Pipelines", "Kubernetes", "Git"]
     },
     {
       title: "Concepts",
       icon: <FiGlobe size={24} />,
-      skills: ["OOP", "Data Structures", "Agile", "SDLC", "Computer Security", "Operating Systems"]
+      skills: ["Object Oriented Programming", "Data Structures"]
     }
   ]
 
