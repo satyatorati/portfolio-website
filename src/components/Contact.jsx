@@ -16,7 +16,6 @@ const Contact = () => {
 
       <div className="max-w-4xl mx-auto">
         <div className="space-y-8">
-          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +66,6 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

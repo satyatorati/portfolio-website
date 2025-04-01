@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { FiBook, FiBriefcase, FiCode } from 'react-icons/fi'
 
 const About = () => {
   return (
@@ -33,8 +32,6 @@ const About = () => {
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
           I thrive on solving complex engineering challenges, whether it's developing high-performance applications, optimizing backend services, or implementing intelligent automation. I am always eager to explore new technologies and build solutions that are impactful, efficient, and user-centric.
           </p>
-
-
         </motion.div>
         
         <motion.div 
@@ -46,7 +43,6 @@ const About = () => {
         >
           <div className="relative w-full max-w-sm mx-auto">
             <div className="aspect-square rounded-lg overflow-hidden relative z-10 shadow-xl">
-              {/* Replace with your actual image */}
               <img 
                 src="/assets/profilepic.jpeg" 
                 alt="Satyanarayana Torati" 
