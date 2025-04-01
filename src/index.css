@@ -1,43 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #0a192f;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply antialiased;
+  }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  body {
+    @apply bg-light-primary dark:bg-dark-primary text-light-text dark:text-dark-text transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-light-text dark:text-dark-text font-display;
+  }
+
+  p {
+    @apply text-light-textSecondary dark:text-dark-textSecondary;
+  }
+
+  ::selection {
+    @apply bg-light-accent/20 dark:bg-dark-accent/20 text-light-text dark:text-dark-text;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-light-primary dark:bg-dark-primary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-light-accent/50 dark:bg-dark-accent/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-light-accent dark:bg-dark-accent;
+  }
 }
 
 @layer components {
-  .section-heading {
-    @apply text-3xl font-bold text-textPrimary mb-8 relative inline-block;
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
   }
-  
-  .section-heading::after {
-    content: "";
-    @apply absolute -bottom-2 left-0 w-2/3 h-0.5 bg-secondary;
+
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold mb-8 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent inline-block font-display;
   }
-  
+
+  .section-subtitle {
+    @apply text-xl sm:text-2xl font-semibold text-light-text dark:text-dark-text mb-4 font-display;
+  }
+
+  .card {
+    @apply bg-light-card dark:bg-dark-card rounded-lg p-6 hover:shadow-xl transition-all duration-300 border border-light-border dark:border-dark-border hover:border-light-accent/30 dark:hover:border-dark-accent/30 backdrop-blur-sm;
+  }
+
   .nav-link {
-    @apply text-textSecondary hover:text-secondary transition-colors duration-300;
+    @apply text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent transition-colors duration-300;
   }
-  
+
   .btn-primary {
-    @apply px-6 py-3 border border-secondary text-secondary rounded hover:bg-secondary/10 transition-all duration-300;
+    @apply px-6 py-3 bg-gradient-to-r from-light-accent to-highlight dark:from-dark-accent dark:to-highlight text-white rounded-lg font-semibold hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1;
   }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm text-light-text dark:text-dark-text rounded-lg font-semibold hover:bg-light-accent/10 dark:hover:bg-dark-accent/10 border border-light-border dark:border-dark-border transition-all duration-300 transform hover:-translate-y-1;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent;
+  }
+
+  .text-primary {
+    @apply text-light-text dark:text-dark-text;
+  }
+
+  .text-secondary {
+    @apply text-light-textSecondary dark:text-dark-textSecondary;
+  }
+}
+
+/* Animation utilities */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply bg-light-card/50 dark:bg-dark-card/50 backdrop-blur-md border border-light-border dark:border-dark-border;
 }

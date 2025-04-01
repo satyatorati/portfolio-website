@@ -22,7 +22,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
+    { name: 'Education', href: '#education' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
@@ -61,7 +61,7 @@ const Navbar = () => {
                 transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
               >
                 <a 
-                  href="https://drive.google.com/file/d/1ka1Nko6kbRFffVASHWYgu5oRurtcAYRT/view?usp=sharing" 
+                  href="https://drive.google.com/file/d/1xwwtyFHt43bF4xbJT3f2e_NvLMXUrTlh/view?usp=sharing" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn-primary"

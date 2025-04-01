@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { FiBook, FiBriefcase, FiCode } from 'react-icons/fi'
 
 const About = () => {
   return (
@@ -8,7 +9,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="section-heading"
+        className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
         About Me
       </motion.h2>
@@ -21,22 +22,19 @@ const About = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="md:col-span-3"
         >
-          <p className="text-textSecondary mb-4">
-            Hello! I'm Satyanarayana Torati, a passionate software developer with a strong foundation in modern web technologies. 
-            I'm currently pursuing my Master's in Computer Science at SUNY Buffalo, expanding my knowledge in Operating Systems, Computer Security, and more.
+          <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
+          Hello! I'm Satyanarayana Torati, a Software Developer with a strong foundation in full-stack development, system design, and scalable software solutions. I'm currently pursuing my Master's in Computer Science at SUNY Buffalo, where I'm expanding my expertise in Data Structures, Algorithms, Databases, and Computer Vision.
           </p>
           
-          <p className="text-textSecondary mb-4">
-            With over 2 years of professional experience at Accenture, I've developed expertise in building robust web applications, 
-            optimizing performance, and implementing efficient solutions for complex problems.
+          <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
+          With over 3 years of experience at Accenture, I contributed to the optimization of large-scale eCommerce platforms, resolving critical issues, and improving performance. My expertise spans JavaScript, React, Node.js, Python, SQL, AWS, and Cloud Technologies, and I'm passionate about designing efficient, reliable, and scalable systems.
           </p>
           
-          <p className="text-textSecondary mb-4">
-            My goal is to create digital experiences that are not only functional and efficient but also accessible and user-friendly. 
-            I'm passionate about learning new technologies and applying them to solve real-world challenges.
+          <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
+          I thrive on solving complex engineering challenges, whether it's developing high-performance applications, optimizing backend services, or implementing intelligent automation. I am always eager to explore new technologies and build solutions that are impactful, efficient, and user-centric.
           </p>
-          
-          
+
+
         </motion.div>
         
         <motion.div 
@@ -46,16 +44,16 @@ const About = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="md:col-span-2 relative"
         >
-          <div className="relative w-full max-w-md mx-auto">
-          <div className="aspect-square bg-gray-300 rounded overflow-hidden relative z-10">
-                {/* Replace with your actual image */}
-                <img 
-                  src="/assets/profilepic.jpeg" 
-                  alt="Your Photo" 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
-            <div className="absolute top-4 left-4 w-full h-full border-2 border-secondary rounded z-0"></div>
+          <div className="relative w-full max-w-sm mx-auto">
+            <div className="aspect-square rounded-lg overflow-hidden relative z-10 shadow-xl">
+              {/* Replace with your actual image */}
+              <img 
+                src="/assets/profilepic.jpeg" 
+                alt="Satyanarayana Torati" 
+                className="w-full h-full object-cover" 
+              />
+            </div>
+            <div className="absolute -top-4 -left-4 w-full h-full border-2 border-light-accent dark:border-dark-accent rounded-lg z-0"></div>
           </div>
         </motion.div>
       </div>

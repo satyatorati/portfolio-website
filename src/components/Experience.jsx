@@ -1,27 +1,7 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { FiBriefcase } from 'react-icons/fi'
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState(0)
-
-  const experiences = [
-    {
-      company: "Accenture",
-      logo: "/assets/accenture.png",  
-      position: "Application Developer",
-      location: "Hyderabad, India",
-      duration: "Jul 2021 – Dec 2023",
-      responsibilities: [
-        "Resolved 150+ critical bugs in a high-traffic eCommerce platform, ensuring 99.9% uptime by optimizing React frontend and Java backend services.",
-        "Reduced database response times by 30% and checkout latency by 20% through query optimization and indexing in PostgreSQL.",
-        "Automated log analysis using Python scripts, cutting incident resolution time by 25% during peak traffic events (e.g., Black Friday).",
-        "Revamped React-based checkout workflows, decreasing user errors by 25% and improving customer satisfaction scores by 15%.",
-        "Architected CI/CD pipelines (Jenkins, Docker) to streamline deployments, reducing deployment failures by 20%.",
-        "Mentored 10+ team members, reducing onboarding time by 30% through detailed documentation in Confluence."
-      ]
-    }
-  ]
-
   return (
     <section id="experience" className="py-20">
       <motion.h2 
@@ -29,53 +9,69 @@ const Experience = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="section-heading"
+        className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
-        Work Experience
+        Experience
       </motion.h2>
-      
-      <div className="flex flex-col md:flex-row gap-6">
-        {/* Unified experience card */}
-        {experiences.map((exp, index) => (
-          <motion.div 
-            key={index}
+
+      <div className="max-w-4xl mx-auto">
+        <div className="space-y-8">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-primary/10 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300"
+            className="flex items-start space-x-4"
           >
-            <div className="flex justify-between items-center mb-4">
-              {/* Logo, company name, role, and work period */}
-              <div className="flex items-center">
-                <img 
-                  src={exp.logo} 
-                  alt={exp.company} 
-                  className="w-12 h-12 mr-4 object-contain" 
-                  style={{ width: "100px", height: "70px" }} 
-                />
-                <div>
-                  <h3 className="text-xl font-semibold">{exp.position}</h3>
-                  <p className="text-secondary">{exp.company}</p>
-                </div>
-              </div>
-              <p className="text-textSecondary">{exp.duration}</p>
+            <div className="flex-shrink-0">
+              <img 
+                src="/assets/ublogo.jpg" 
+                alt="UB Logo" 
+                className="w-16 h-16 object-contain"
+              />
             </div>
-            {/* Responsibilities list with custom bullet style */}
-            <ul className="space-y-3 pl-5">
-  {exp.responsibilities.map((responsibility, idx) => {
-    const icons = ["💡", "🚀", "⚡", "🔍", "🔧", "📘"]; // Different icons for each point
-
-    return (
-      <li key={idx} className={`flex items-start ${idx === 0 ? "mt-4" : "mt-2"}`}>
-        <span className="text-secondary mr-3 text-lg">{icons[idx % icons.length]}</span>
-        <span className="text-textSecondary">{responsibility}</span>
-      </li>
-    );
-  })}
-</ul>
+            <div>
+              <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">University at Buffalo, SUNY</h3>
+              <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Application Developer - UB Gym Hub</p>
+              <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Aug 2024 - Mar 2025</p>
+              <ul className="list-disc list-inside text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80 space-y-2 mt-4">
+                <li>💡 Developed a scalable gym reservation system using MERN stack, handling over 500 daily reservations</li>
+                <li>⚡ Engineered real-time WebSocket-based updates, reducing booking conflicts by 35%</li>
+                <li>🚀 Migrated backend storage to AWS DynamoDB, optimizing data handling for 1000+ concurrent users</li>
+                <li>🔧 Containerized with Docker and deployed on AWS with Kubernetes</li>
+                <li>🤖 Enhanced support handling with AWS Bedrock AI, boosting response efficiency by 40%</li>
+              </ul>
+            </div>
           </motion.div>
-        ))}
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex items-start space-x-4"
+          >
+            <div className="flex-shrink-0">
+              <img 
+                src="/assets/accenture.png" 
+                alt="Accenture Logo" 
+                className="w-16 h-16 object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">Accenture</h3>
+              <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Application Developer</p>
+              <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Jul 2021 - Dec 2023</p>
+              <ul className="list-disc list-inside text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80 space-y-2 mt-4">
+                <li>💡 Resolved 250+ critical issues on high-traffic eCommerce platform, maintaining 99.9% uptime</li>
+                <li>⚡ Enhanced database performance by 30% and improved checkout latency by 20%</li>
+                <li>🔍 Streamlined log analysis using Python scripts, reducing incident resolution time by 25%</li>
+                <li>🚀 Revamped checkout process, reducing user errors by 25% and boosting satisfaction scores</li>
+                <li>🔧 Designed CI/CD pipelines with Jenkins and Docker, reducing deployment failures by 20%</li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   )

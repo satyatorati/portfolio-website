@@ -1,35 +1,7 @@
 import { motion } from 'framer-motion'
+import { FiBook } from 'react-icons/fi'
 
 const Education = () => {
-  const educationDetails = [
-    {
-      degree: "Master of Science in Computer Science",
-      university: "The State University of New York (SUNY), Buffalo, NY",
-      logo: "/assets/ublogo.jpg", 
-      duration: "Jan 2024 – May 2025",
-      gpa: "GPA: 3.48/4.0",
-      coursework: [
-        "Operating Systems",
-        "Computer Security",
-        "Data Models & Query Language",
-        "Data Structures & Algorithms"
-      ]
-    },
-    {
-      degree: "Bachelor of Engineering in Computer Science",
-      university: "Anil Neerukonda Institute of Technology and Sciences (ANITS), India",
-      logo: "/assets/anitslogo.jpg", 
-      duration: "Jun 2018 – May 2021",
-      gpa: "GPA: 8.0/10.0",
-      coursework: [
-        "Database Management Systems",
-        "Software Engineering",
-        "Object-Oriented Programming",
-        "Web Technologies"
-      ]
-    }
-  ]
-
   return (
     <section id="education" className="py-20">
       <motion.h2 
@@ -37,47 +9,57 @@ const Education = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="section-heading"
+        className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
         Education
       </motion.h2>
 
-      <div className="space-y-10">
-        {educationDetails.map((edu, index) => (
-          <motion.div 
-            key={index} 
+      <div className="max-w-4xl mx-auto">
+        <div className="space-y-8">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="bg-primary/10 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex items-start space-x-4"
           >
-            {/* University Details with Logo */}
-            <div className="flex justify-between items-center mb-4">
-              <div className="flex items-center">
-                <img 
-                  src={edu.logo} 
-                  alt={edu.university} 
-                  className="w-12 h-12 mr-4 object-contain" 
-                />
-                <div>
-                  <h3 className="text-xl font-semibold">{edu.degree}</h3>
-                  <p className="text-secondary">{edu.university}</p>
-                </div>
-              </div>
-      
-              <p className="text-textSecondary text-right">
-                {edu.duration} <br /> {edu.gpa}
-              </p>
+            <div className="flex-shrink-0">
+              <img 
+                src="/assets/ublogo.jpg" 
+                alt="UB Logo" 
+                className="w-16 h-16 object-contain"
+              />
             </div>
-
-    
-            <p className="text-secondary font-medium">Relevant Coursework:</p>
-            <p className="text-textSecondary">
-              {edu.coursework.join(", ")}
-            </p>
+            <div>
+              <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">University at Buffalo, SUNY</h3>
+              <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Master of Science in Computer Science</p>
+              <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Jan 2024 - May 2025</p>
+              <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Relevant Coursework: Operating Systems, Computer Security, Data Models & Query Language, Data Structures & Algorithms</p>
+            </div>
           </motion.div>
-        ))}
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex items-start space-x-4"
+          >
+            <div className="flex-shrink-0">
+              <img 
+                src="/assets/anitslogo.jpg" 
+                alt="ANITS Logo" 
+                className="w-16 h-16 object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">Anil Neerukonda Institute of Technology and Sciences (ANITS)</h3>
+              <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Bachelor of Engineering in Computer Science</p>
+              <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Jun 2018 - May 2021</p>
+              <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Relevant Coursework: Database Management Systems, Software Engineering, Object-Oriented Programming, Web Technologies</p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   )
