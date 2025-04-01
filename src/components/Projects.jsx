@@ -13,12 +13,6 @@ const Projects = () => {
       tags: ["React", "Node.js", "Express.js", "MongoDB", "Socket.io", "Tailwind CSS", "JWT", "Google Translate API"],
       github: "https://github.com/satyatorati/chat-app",
       demo: "https://chat-app-6nvc.onrender.com/",
-      highlights: [
-        "Built a real-time messaging platform with instant messaging and online status tracking",
-        "Integrated secure user authentication with JWT and role-based access control",
-        "Optimized real-time communication using Socket.io, reducing latency by 30%",
-        "Leveraged Google Translate API for automatic message translation in multiple languages"
-      ],
       category: "web"
     },
     {
@@ -28,12 +22,6 @@ const Projects = () => {
       tags: ["React", "Redux Toolkit", "RTK Query", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "OpenAI"],
       github: "https://github.com/satyatorati/book-store-frontend",
       demo: "https://book-store-flax.vercel.app/",
-      highlights: [
-        "Developed an eCommerce platform with 1,000+ products and 200+ monthly transactions",
-        "Built an admin dashboard automating CRUD operations, reducing task time by 40%",
-        "Integrated OpenAI-powered chatbot for enhanced customer support and engagement",
-        "Implemented smart product recommendations using AI algorithms"
-      ],
       category: "web"
     },
     {
@@ -43,12 +31,6 @@ const Projects = () => {
       tags: ["Python", "Flask", "Scikit-learn", "TensorFlow", "Docker", "MongoDB"],
       github: "https://github.com/satyatorati/Telecom-churn-prediction",
       demo: "https://github.com/satyatorati/Telecom-churn-prediction",
-      highlights: [
-        "Achieved 87% prediction accuracy using SVM and Random Forest algorithms",
-        "Built a Flask REST API handling 50+ requests/sec with asynchronous workers",
-        "Containerized the application using Docker for easy deployment",
-        "Implemented real-time predictions with asynchronous processing"
-      ],
       category: "ml"
     }
   ]
@@ -109,9 +91,19 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl overflow-hidden border border-light-border dark:border-dark-border hover:shadow-glow transition-all duration-300"
             >
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                </div>
+              </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-light-text dark:text-dark-text mb-2">{project.title}</h3>
-                <p className="text-light-textSecondary dark:text-dark-textSecondary mb-4">
+                <p className="text-light-textSecondary dark:text-dark-textSecondary text-sm mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -121,38 +113,23 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <ul className="list-disc list-inside text-sm text-light-textSecondary/80 dark:text-dark-textSecondary/80 space-y-1 mb-4">
-                  {project.highlights.map((highlight, i) => (
-                    <li key={i}>{highlight}</li>
-                  ))}
-                </ul>
-                <div className="flex justify-between items-center">
-                  <a
-                    href={project.demo}
+                <div className="flex justify-end space-x-4">
+                  <a 
+                    href={project.github} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-light-accent dark:text-dark-accent hover:text-highlight dark:hover:text-highlight transition-colors duration-300"
+                    className="text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent"
                   >
-                    View Project →
+                    <FiGithub size={20} />
                   </a>
-                  <div className="flex space-x-4">
-                    <a 
-                      href={project.github} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent"
-                    >
-                      <FiGithub size={20} />
-                    </a>
-                    <a 
-                      href={project.demo} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent"
-                    >
-                      <FiExternalLink size={20} />
-                    </a>
-                  </div>
+                  <a 
+                    href={project.demo} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent"
+                  >
+                    <FiExternalLink size={20} />
+                  </a>
                 </div>
               </div>
             </motion.div>
