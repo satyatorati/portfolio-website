@@ -26,7 +26,7 @@ const About = () => {
           </p>
           
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
-            Currently, I’m completing my Master’s in Computer Science at SUNY Buffalo, focusing on advanced topics like data structures, algorithms, and system design. At Accenture and the University at Buffalo, I’ve contributed to large-scale eCommerce platforms, cloud-native systems, and real-time reservation solutions using the MERN stack, Docker, Kubernetes, and CI/CD pipelines.
+            Completed Master’s in Computer Science at SUNY Buffalo, focusing on advanced topics like data structures, algorithms, and system design. At Accenture and the University at Buffalo, I’ve contributed to large-scale eCommerce platforms, cloud-native systems, and real-time reservation solutions using the MERN stack, Docker, Kubernetes, and CI/CD pipelines.
           </p>
           
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
