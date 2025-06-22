@@ -55,7 +55,7 @@ const Education = () => {
             <div>
               <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">Anil Neerukonda Institute of Technology and Sciences (ANITS)</h3>
               <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Bachelor of Engineering in Computer Science</p>
-              <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Jun 2018 - May 2021</p>
+              <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80"></p>
               <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Relevant Coursework: Database Management Systems, Software Engineering, Object-Oriented Programming, Web Technologies</p>
             </div>
           </motion.div>

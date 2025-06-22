@@ -22,6 +22,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
+          {/* Location Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -34,6 +35,7 @@ const Hero = () => {
             </div>
           </motion.div>
 
+          {/* Name */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,6 +47,7 @@ const Hero = () => {
             </span>
           </motion.h1>
 
+          {/* Title */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,19 +55,21 @@ const Hero = () => {
             className="text-center mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display text-light-text dark:text-dark-text">
-            Software Engineer | Full-Stack Developer
+              Software Engineer 
             </h2>
           </motion.div>
 
+          {/* Summary */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg sm:text-xl text-center text-light-textSecondary dark:text-dark-textSecondary mb-12 max-w-2xl mx-auto font-medium"
           >
-            Currently pursuing an M.S. in Computer Science at SUNY Buffalo, with 3+ years of experience in designing and developing scalable, high-performance applications. Specialized in full-stack development, the MERN stack, and cloud technologies. Passionate about building efficient, user-centric digital solutions
+            Software Engineer with 4+ years of experience building scalable web applications using React, Node.js, and AWS. Completed M.S in Computer Science at SUNY Buffalo. Skilled in MERN stack, microservices, Docker, Kubernetes, and CI/CD automation. Passionate about delivering robust, cloud-native, AI-integrated solutions.
           </motion.p>
 
+          {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -85,6 +90,7 @@ const Hero = () => {
             </a>
           </motion.div>
 
+          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -131,14 +137,8 @@ const Hero = () => {
         <div className="w-6 h-10 rounded-full border-2 border-light-text/20 dark:border-dark-text/20 flex justify-center">
           <motion.div
             className="w-1 h-2 bg-light-text/50 dark:bg-dark-text/50 rounded-full mt-2"
-            animate={{
-              y: [0, 12, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           />
         </div>
       </motion.div>

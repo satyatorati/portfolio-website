@@ -22,15 +22,15 @@ const About = () => {
           className="md:col-span-3"
         >
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
-          Hello! I'm Satyanarayana Torati, a Software Developer with a strong foundation in full-stack development, system design, and scalable software solutions. I'm currently pursuing my Master's in Computer Science at SUNY Buffalo, where I'm expanding my expertise in Data Structures, Algorithms, Databases, and Computer Vision.
+            I’m Satyanarayana Torati, a Software Development Engineer with 4+ years of experience in building high-performance, scalable full-stack web applications. My expertise lies in modern technologies like JavaScript, React, Node.js, and AWS, with a passion for creating seamless user experiences and efficient backend systems.
           </p>
           
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
-          With over 3 years of experience at Accenture, I contributed to the optimization of large-scale eCommerce platforms, resolving critical issues, and improving performance. My expertise spans JavaScript, React, Node.js, Python, SQL, AWS, and Cloud Technologies, and I'm passionate about designing efficient, reliable, and scalable systems.
+            Currently, I’m completing my Master’s in Computer Science at SUNY Buffalo, focusing on advanced topics like data structures, algorithms, and system design. At Accenture and the University at Buffalo, I’ve contributed to large-scale eCommerce platforms, cloud-native systems, and real-time reservation solutions using the MERN stack, Docker, Kubernetes, and CI/CD pipelines.
           </p>
           
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
-          I thrive on solving complex engineering challenges, whether it's developing high-performance applications, optimizing backend services, or implementing intelligent automation. I am always eager to explore new technologies and build solutions that are impactful, efficient, and user-centric.
+            I enjoy solving engineering problems that demand scalability, performance, and reliability—from API optimization and microservices to AI integrations with AWS Bedrock and OpenAI. I’m driven by impact, clean code, and the pursuit of continual learning through real-world projects.
           </p>
         </motion.div>
         
