@@ -39,14 +39,14 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="md:col-span-2 relative"
+          className="md:col-span-2 relative flex items-center justify-center md:justify-end"
         >
-          <div className="relative w-full max-w-sm mx-auto">
+          <div className="relative w-full max-w-sm mx-auto md:mx-0">
             <div className="aspect-square rounded-lg overflow-hidden relative z-10 shadow-xl">
               <img 
-                src="/assets/profilepic.jpeg" 
+                src="/assets/profilepic.png" 
                 alt="Satyanarayana Torati" 
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-cover object-center" 
               />
             </div>
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-light-accent dark:border-dark-accent rounded-lg z-0"></div>
