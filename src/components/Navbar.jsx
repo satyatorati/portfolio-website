@@ -61,7 +61,7 @@ const Navbar = () => {
                 transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
               >
                 <a 
-                  href="https://drive.google.com/file/d/1dvyrrbcWJNVZo1f0iRTlAXuMEuAV1IPU/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1YxuNu_QwBktfsJq1nODrt3TNJwtd5veX/view?usp=drive_link"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn-primary"
@@ -108,7 +108,7 @@ const Navbar = () => {
               ))}
               <li>
                 <a 
-                  href="/resume.pdf" 
+                  href="https://drive.google.com/file/d/1YxuNu_QwBktfsJq1nODrt3TNJwtd5veX/view?usp=drive_link"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-block btn-primary"
