@@ -66,7 +66,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg sm:text-xl text-center text-light-textSecondary dark:text-dark-textSecondary mb-12 max-w-2xl mx-auto font-medium"
           >
-            Software Engineer with 4+ years of experience building scalable web applications using React, Node.js, and AWS. Completed M.S in Computer Science at SUNY Buffalo. Skilled in MERN stack, microservices, Docker, Kubernetes, and CI/CD automation. Passionate about delivering robust, cloud-native, AI-integrated solutions.
+            Results-driven Software Engineer with experience in designing, building, and deploying scalable full-stack web applications using JavaScript, React, Node.js, and AWS. Proven track record of delivering high-performance systems in eCommerce and real-time platforms.
           </motion.p>
 
           {/* Buttons */}

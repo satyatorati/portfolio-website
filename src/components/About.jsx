@@ -22,15 +22,15 @@ const About = () => {
           className="md:col-span-3"
         >
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
-            I’m Satyanarayana Torati, a Software Development Engineer with 4+ years of experience in building high-performance, scalable full-stack web applications. My expertise lies in modern technologies like JavaScript, React, Node.js, and AWS, with a passion for creating seamless user experiences and efficient backend systems.
+            Results-driven Software Engineer with experience in designing, building, and deploying scalable full-stack web applications using JavaScript, React, Node.js, and AWS. Proven track record of delivering high-performance systems in eCommerce and real-time platforms, with strong expertise in RESTful API development, microservices, and system design.
           </p>
           
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
-            Completed Master’s in Computer Science at SUNY Buffalo, focusing on advanced topics like data structures, algorithms, and system design. At Accenture and the University at Buffalo, I’ve contributed to large-scale eCommerce platforms, cloud-native systems, and real-time reservation solutions using the MERN stack, Docker, Kubernetes, and CI/CD pipelines.
+            Adept at Agile development, end-to-end testing, and CI/CD automation using Docker, Kubernetes, and GitHub Actions. Passionate about writing clean, maintainable code and building intuitive user experiences that drive business outcomes. Actively expanding skills through hands-on projects and advanced coursework in computer science.
           </p>
           
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
-            I enjoy solving engineering problems that demand scalability, performance, and reliability—from API optimization and microservices to AI integrations with AWS Bedrock and OpenAI. I’m driven by impact, clean code, and the pursuit of continual learning through real-world projects.
+            At Accenture, I engineered scalable eCommerce backend services handling peak traffic, optimized database performance, and achieved 99.99% uptime. At University at Buffalo, I developed a MERN-based gym reservation platform supporting 500+ daily bookings with real-time WebSocket updates. My work spans from microservices architecture to AI integration with LLMs, always focused on delivering robust, cloud-native solutions.
           </p>
         </motion.div>
         

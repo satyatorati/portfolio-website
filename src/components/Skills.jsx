@@ -9,24 +9,24 @@ const Skills = () => {
       skills: ["JavaScript (ES6+)", "Python", "C", "Java", "SQL"]
     },
     {
-      title: "Frontend",
+      title: "Frameworks & Tools",
       icon: FiCode,
-      skills: ["React", "Redux", "HTML5", "CSS3", "Tailwind CSS"]
+      skills: ["React", "Redux", "HTML5", "CSS3", "Tailwind CSS", "Streamlit"]
     },
     {
       title: "Backend",
       icon: FiServer,
-      skills: ["Node.js", "Express.js", "RESTful APIs", "Flask", "Microservices", "JWT", "Socket.io"]
+      skills: ["Node.js", "Express.js", "REST APIs", "Microservices", "JWT", "Socket.io", "FastAPI", "Requests"]
     },
     {
-      title: "Databases & DevOps",
+      title: "Database & DevOps",
       icon: FiDatabase,
-      skills: ["MongoDB", "PostgreSQL", "MySQL", "AWS EC2", "Docker", "CI/CD Pipelines", "Kubernetes"]
+      skills: ["MongoDB", "PostgreSQL", "MySQL", "AWS", "Docker", "Kubernetes", "CI/CD Pipelines", "GitHub Actions"]
     },
     {
       title: "Tools & Concepts",
       icon: FiTool,
-      skills: ["Git", "Postman", "Jira", "Jenkins", "OOP", "Data Structures"]
+      skills: ["Git", "Postman", "Jenkins", "Jira", "OOP", "Agile", "Data Structures", "System Design", "Security"]
     }
   ]
 

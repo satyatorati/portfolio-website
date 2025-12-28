@@ -8,29 +8,29 @@ const Projects = () => {
   const projects = [
     {
       title: "Real-Time Chat App",
-      description: "A real-time messaging platform serving over 500 active daily users, providing instant messaging, online status tracking, and multilingual support through Google Translate API integration.",
+      description: "Built a real-time MERN + Socket.io chat platform with secure JWT-based APIs and GenAI-powered auto-translation using Google Translate API.",
       image: "/assets/chatapp.png",
-      tags: ["React", "Node.js", "Express.js", "MongoDB", "Socket.io", "Tailwind CSS", "JWT", "Google Translate API"],
+      tags: ["React", "Node.js", "Express.js", "MongoDB", "Socket.io", "JWT", "Google Translate API"],
       github: "https://github.com/satyatorati/chat-app",
       demo: "https://chat-app-6nvc.onrender.com/",
       category: "web"
     },
     {
-      title: "E-Commerce Bookstore",
-      description: "A full-featured eCommerce platform with over 1,000 products and 200+ monthly transactions, featuring an AI-powered chatbot for customer support and smart product recommendations.",
+      title: "E-Commerce Bookstore with Admin Dashboard",
+      description: "Developed a full MERN eCommerce bookstore with robust admin APIs and an integrated OpenAI customer support chatbot for automated assistance.",
       image: "/assets/bookstore.png",
-      tags: ["React", "Redux Toolkit", "RTK Query", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "OpenAI"],
+      tags: ["React", "Redux", "Node.js", "Express.js", "MongoDB", "OpenAI", "MERN"],
       github: "https://github.com/satyatorati/book-store-frontend",
       demo: "https://book-store-flax.vercel.app/",
       category: "web"
     },
     {
-      title: "Telecom Churn Prediction System",
-      description: "A predictive model achieving 87% accuracy to identify high-risk churn customers using SVM and Random Forest algorithms. Includes a Flask REST API capable of handling 50+ requests/sec with asynchronous workers.",
+      title: "Real-Time Parking Lot Occupancy Tracker",
+      description: "Developed a real-time parking occupancy detection system using OpenCV and classical CV techniques. Processed the PKLot dataset with optimized preprocessing and contour-based detection to identify occupied vs. free parking spots. Designed a visualization module to display live occupancy status and detection results.",
       image: "/assets/churn.png",
-      tags: ["Python", "Flask", "Scikit-learn", "TensorFlow", "Docker", "MongoDB"],
-      github: "https://github.com/satyatorati/Telecom-churn-prediction",
-      demo: "https://github.com/satyatorati/Telecom-churn-prediction",
+      tags: ["Python", "OpenCV", "Computer Vision", "Image Processing", "CVIP"],
+      github: "https://github.com/satyatorati",
+      demo: "https://github.com/satyatorati",
       category: "ml"
     }
   ]
@@ -42,7 +42,7 @@ const Projects = () => {
   const filters = [
     { name: 'All Projects', value: 'all' },
     { name: 'Web Development', value: 'web' },
-    { name: 'Machine Learning', value: 'ml' }
+    { name: 'Computer Vision', value: 'ml' }
   ]
 
   return (
