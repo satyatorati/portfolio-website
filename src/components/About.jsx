@@ -22,15 +22,15 @@ const About = () => {
           className="md:col-span-3"
         >
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
-            Results-driven Software Engineer with experience in designing, building, and deploying scalable full-stack web applications using JavaScript, React, Node.js, and AWS. Proven track record of delivering high-performance systems in eCommerce and real-time platforms, with strong expertise in RESTful API development, microservices, and system design.
+            Software Engineer with 3+ years of experience designing, developing, and deploying scalable backend and full-stack applications using Java (Spring Boot), Python (Flask/FastAPI), JavaScript/TypeScript, and AWS. Strong background in microservices architecture, REST/GraphQL APIs, distributed systems, and cloud-native deployments.
           </p>
           
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
-            Adept at Agile development, end-to-end testing, and CI/CD automation using Docker, Kubernetes, and GitHub Actions. Passionate about writing clean, maintainable code and building intuitive user experiences that drive business outcomes. Actively expanding skills through hands-on projects and advanced coursework in computer science.
+            Proven ability to deliver secure, high-performance systems with OAuth2/JWT, CI/CD automation, Docker, Kubernetes, and modern engineering practices. Experienced in Agile collaboration across product, QA, and DevOps teams within financial and insurance domains.
           </p>
           
           <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-6">
-            At Accenture, I engineered scalable eCommerce backend services handling peak traffic, optimized database performance, and achieved 99.99% uptime. At University at Buffalo, I developed a MERN-based gym reservation platform supporting 500+ daily bookings with real-time WebSocket updates. My work spans from microservices architecture to AI integration with LLMs, always focused on delivering robust, cloud-native solutions.
+            At MetLife, I develop backend microservices using Java 17 and Spring Boot for financial reporting and asset process flows, while building dynamic React.js front-end modules for 500+ daily active users. At Accenture, I built full-stack features for enterprise applications and resolved 250+ production issues, maintaining 99.9% uptime. My work spans from microservices architecture to secure authentication systems, always focused on delivering robust, scalable solutions.
           </p>
         </motion.div>
         

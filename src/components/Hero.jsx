@@ -31,7 +31,7 @@ const Hero = () => {
           >
             <div className="inline-flex items-center space-x-2 bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-light-border dark:border-dark-border">
               <FiMapPin className="text-light-accent dark:text-dark-accent" />
-              <span className="text-light-text dark:text-dark-text font-mono">Buffalo, NY</span>
+              <span className="text-light-text dark:text-dark-text font-mono">New York, USA</span>
             </div>
           </motion.div>
 
@@ -66,7 +66,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg sm:text-xl text-center text-light-textSecondary dark:text-dark-textSecondary mb-12 max-w-2xl mx-auto font-medium"
           >
-            Results-driven Software Engineer with experience in designing, building, and deploying scalable full-stack web applications using JavaScript, React, Node.js, and AWS. Proven track record of delivering high-performance systems in eCommerce and real-time platforms.
+            Software Engineer with 3+ years of experience designing, developing, and deploying scalable backend and full-stack applications using Java (Spring Boot), Python (Flask/FastAPI), JavaScript/TypeScript, and AWS. Strong background in microservices architecture, REST/GraphQL APIs, distributed systems, and cloud-native deployments. Proven ability to deliver secure, high-performance systems with OAuth2/JWT, CI/CD automation, Docker, Kubernetes, and modern engineering practices.
           </motion.p>
 
           {/* Buttons */}
@@ -100,7 +100,7 @@ const Hero = () => {
             {[
               { icon: FiGithub, href: 'https://github.com/satyatorati', label: 'GitHub' },
               { icon: FiLinkedin, href: 'https://www.linkedin.com/in/satya-torati/', label: 'LinkedIn' },
-              { icon: FiMail, href: 'mailto:satyatorati9@gmail.com', label: 'Email' }
+              { icon: FiMail, href: 'mailto:satyatorati5@gmail.com', label: 'Email' }
             ].map((social, index) => (
               <motion.a
                 key={social.label}

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiMail, FiMapPin, FiLinkedin, FiGithub } from 'react-icons/fi'
+import { FiMail, FiMapPin, FiPhone, FiLinkedin, FiGithub } from 'react-icons/fi'
 
 const Contact = () => {
   return (
@@ -38,10 +38,10 @@ const Contact = () => {
                 <div>
                   <h4 className="text-xl font-semibold text-light-text dark:text-dark-text mb-1">Email</h4>
                   <a 
-                    href="mailto:satyatorati9@gmail.com"
+                    href="mailto:satyatorati5@gmail.com"
                     className="text-lg text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent transition-colors duration-300"
                   >
-                    satyatorati9@gmail.com
+                    satyatorati5@gmail.com
                   </a>
                 </div>
               </motion.div>
@@ -59,8 +59,29 @@ const Contact = () => {
                 <div>
                   <h4 className="text-xl font-semibold text-light-text dark:text-dark-text mb-1">Location</h4>
                   <p className="text-lg text-light-textSecondary dark:text-dark-textSecondary">
-                    Buffalo, NY
+                    New York, USA
                   </p>
+                </div>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex items-start space-x-4"
+              >
+                <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0">
+                  <FiPhone className="w-6 h-6 text-light-accent dark:text-dark-accent" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-light-text dark:text-dark-text mb-1">Phone</h4>
+                  <a 
+                    href="tel:+17162488486"
+                    className="text-lg text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent transition-colors duration-300"
+                  >
+                    (716) 248-8486
+                  </a>
                 </div>
               </motion.div>
             </div>
@@ -70,7 +91,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl p-8 border border-light-border dark:border-dark-border"
           >
             <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-6">Social Links</h3>
@@ -83,7 +104,7 @@ const Contact = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
               >
                 <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-light-accent/20 dark:group-hover:bg-dark-accent/20 transition-colors duration-300">
                   <FiLinkedin className="w-6 h-6 text-light-accent dark:text-dark-accent" />
@@ -104,7 +125,7 @@ const Contact = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.6 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
               >
                 <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-light-accent/20 dark:group-hover:bg-dark-accent/20 transition-colors duration-300">
                   <FiGithub className="w-6 h-6 text-light-accent dark:text-dark-accent" />

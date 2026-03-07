@@ -6,27 +6,47 @@ const Skills = () => {
     {
       title: "Languages",
       icon: FiCode,
-      skills: ["JavaScript (ES6+)", "Python", "C", "Java", "SQL"]
+      skills: ["Java 17", "TypeScript", "JavaScript (ES6+)", "SQL", "Python"]
     },
     {
-      title: "Frameworks & Tools",
+      title: "Frontend",
       icon: FiCode,
-      skills: ["React", "Redux", "HTML5", "CSS3", "Tailwind CSS", "Streamlit"]
+      skills: ["React.js", "Angular", "Redux", "HTML5", "CSS3", "Tailwind CSS", "Responsive UI Development"]
     },
     {
-      title: "Backend",
+      title: "Backend & Frameworks",
       icon: FiServer,
-      skills: ["Node.js", "Express.js", "REST APIs", "Microservices", "JWT", "Socket.io", "FastAPI", "Requests"]
+      skills: ["Spring Boot", "Spring Security", "REST & GraphQL APIs", "Flask", "FastAPI", "Microservices Architecture", "Event-Driven Systems", "Redis", "Kafka"]
     },
     {
-      title: "Database & DevOps",
+      title: "Cloud & DevOps",
       icon: FiDatabase,
-      skills: ["MongoDB", "PostgreSQL", "MySQL", "AWS", "Docker", "Kubernetes", "CI/CD Pipelines", "GitHub Actions"]
+      skills: ["AWS (EC2, S3, Lambda, API Gateway)", "Docker", "Kubernetes", "Jenkins", "GitHub Actions", "CI/CD Pipelines"]
     },
     {
-      title: "Tools & Concepts",
+      title: "Databases",
+      icon: FiDatabase,
+      skills: ["PostgreSQL", "MySQL", "MongoDB", "Database Design", "Query Optimization", "Transactions"]
+    },
+    {
+      title: "Security",
       icon: FiTool,
-      skills: ["Git", "Postman", "Jenkins", "Jira", "OOP", "Agile", "Data Structures", "System Design", "Security"]
+      skills: ["OAuth2", "JWT Authentication", "Spring Security", "Secure API Design"]
+    },
+    {
+      title: "Testing",
+      icon: FiTool,
+      skills: ["JUnit", "Mockito", "Postman", "Unit & Integration Testing"]
+    },
+    {
+      title: "Tools & Practices",
+      icon: FiTool,
+      skills: ["Git", "Jira", "Confluence", "Agile/Scrum", "SOLID Principles", "Clean Code"]
+    },
+    {
+      title: "Core Concepts",
+      icon: FiCode,
+      skills: ["Data Structures & Algorithms", "Object-Oriented Design", "System Design & Scalability"]
     }
   ]
 
