@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import profilePic from '../assets/pic.jpg'
 
 const About = () => {
   return (
@@ -44,7 +45,7 @@ const About = () => {
           <div className="relative w-full max-w-sm mx-auto">
             <div className="aspect-square rounded-lg overflow-hidden relative z-10 shadow-xl">
               <img 
-                src="src/assets/pic.jpg" 
+                src={profilePic} 
                 alt="Satyanarayana Torati" 
                 className="w-full h-full object-cover" 
               />
