@@ -44,7 +44,7 @@ const About = () => {
           <div className="relative w-full max-w-sm mx-auto">
             <div className="aspect-square rounded-lg overflow-hidden relative z-10 shadow-xl">
               <img 
-                src="/assets/profilepic.jpeg" 
+                src="/assets/profilepic.png" 
                 alt="Satyanarayana Torati" 
                 className="w-full h-full object-cover" 
               />
