@@ -40,7 +40,7 @@ const Contact = () => {
                 <div>
                   <h4 className="text-xl font-semibold text-light-text dark:text-dark-text mb-1">Schedule a Call</h4>
                   <a
-                    href="#"
+                    href="https://calendly.com/satyatorati5/30min"
                     className="text-lg text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent transition-colors duration-300"
                   >
                     Book a 30-min chat →

@@ -45,7 +45,8 @@ const Projects = () => {
       github: "#",
       demo: null,
       category: "backend",
-      categoryLabel: "Backend / System Design"
+      categoryLabel: "Backend / System Design",
+      inProgress: true
     },
     {
       title: "DocuMind — RAG-Based Document Q&A API",
