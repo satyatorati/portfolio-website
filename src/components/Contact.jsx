@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion'
-import { FiMail, FiMapPin, FiPhone, FiLinkedin, FiGithub } from 'react-icons/fi'
+import { FiMail, FiMapPin, FiPhone, FiLinkedin, FiGithub, FiCalendar } from 'react-icons/fi'
 
 const Contact = () => {
   return (
     <section id="contact" className="py-20">
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.05 }}
         transition={{ duration: 0.5 }}
         className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
@@ -19,16 +19,39 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.5 }}
             className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl p-8 border border-light-border dark:border-dark-border"
           >
-            <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-6">Let's Connect</h3>
+            <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-6">Let&apos;s Connect</h3>
             <div className="space-y-6">
-              <motion.div 
+
+              {/* Calendly — first */}
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="flex items-start space-x-4"
+              >
+                <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0">
+                  <FiCalendar className="w-6 h-6 text-light-accent dark:text-dark-accent" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-light-text dark:text-dark-text mb-1">Schedule a Call</h4>
+                  <a
+                    href="#"
+                    className="text-lg text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent transition-colors duration-300"
+                  >
+                    Book a 30-min chat →
+                  </a>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.05 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="flex items-start space-x-4"
               >
@@ -37,7 +60,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-semibold text-light-text dark:text-dark-text mb-1">Email</h4>
-                  <a 
+                  <a
                     href="mailto:satyatorati5@gmail.com"
                     className="text-lg text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent transition-colors duration-300"
                   >
@@ -46,11 +69,11 @@ const Contact = () => {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 className="flex items-start space-x-4"
               >
                 <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0">
@@ -64,11 +87,11 @@ const Contact = () => {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 className="flex items-start space-x-4"
               >
                 <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0">
@@ -76,7 +99,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-semibold text-light-text dark:text-dark-text mb-1">Phone</h4>
-                  <a 
+                  <a
                     href="tel:+17162488486"
                     className="text-lg text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent transition-colors duration-300"
                   >
@@ -90,21 +113,21 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl p-8 border border-light-border dark:border-dark-border"
           >
             <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-6">Social Links</h3>
             <div className="space-y-6">
-              <motion.a 
+              <motion.a
                 href="https://www.linkedin.com/in/satya-torati/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-4 group"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.6 }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-light-accent/20 dark:group-hover:bg-dark-accent/20 transition-colors duration-300">
                   <FiLinkedin className="w-6 h-6 text-light-accent dark:text-dark-accent" />
@@ -117,15 +140,15 @@ const Contact = () => {
                 </div>
               </motion.a>
 
-              <motion.a 
+              <motion.a
                 href="https://github.com/satyatorati"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-4 group"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.7 }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-light-accent/20 dark:group-hover:bg-dark-accent/20 transition-colors duration-300">
                   <FiGithub className="w-6 h-6 text-light-accent dark:text-dark-accent" />

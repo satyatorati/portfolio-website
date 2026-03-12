@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiCode, FiDatabase, FiServer, FiTool } from 'react-icons/fi'
+import { FiCode, FiDatabase, FiServer, FiTool, FiCpu } from 'react-icons/fi'
 
 const Skills = () => {
   const skillCategories = [
@@ -34,6 +34,11 @@ const Skills = () => {
       skills: ["OAuth2", "JWT Authentication", "Spring Security", "Secure API Design"]
     },
     {
+      title: "AI & Machine Learning",
+      icon: FiCpu,
+      skills: ["LangChain", "OpenAI API (GPT-4)", "AWS Bedrock", "RAG (Retrieval-Augmented Generation)", "Vector Databases (Pinecone)", "Prompt Engineering", "Hugging Face"]
+    },
+    {
       title: "Testing",
       icon: FiTool,
       skills: ["JUnit", "Mockito", "Postman", "Unit & Integration Testing"]
@@ -52,14 +57,14 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-20">
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.05 }}
         transition={{ duration: 0.5 }}
         className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
-        Skills & Technologies
+        Skills &amp; Technologies
       </motion.h2>
 
       <div className="max-w-6xl mx-auto">
@@ -69,8 +74,8 @@ const Skills = () => {
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, amount: 0.05 }}
+              transition={{ duration: 0.5, delay: Math.min(index * 0.08, 0.2) }}
               className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl p-6 border border-light-border dark:border-dark-border hover:shadow-glow transition-all duration-300"
             >
               <div className="flex items-center space-x-3 mb-6">
@@ -79,23 +84,21 @@ const Skills = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-light-text dark:text-dark-text">{category.title}</h3>
               </div>
-              <div className="space-y-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <motion.div
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <span
                     key={skill}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: skillIndex * 0.05 }}
-                    className="group"
+                    className="inline-block px-2.5 py-1 text-sm font-medium rounded-md
+                      bg-[#F3F4F6] dark:bg-[#374151]
+                      text-light-textSecondary dark:text-dark-textSecondary
+                      border border-transparent
+                      hover:bg-light-accent/10 dark:hover:bg-dark-accent/10
+                      hover:text-light-accent dark:hover:text-dark-accent
+                      hover:shadow-sm
+                      transition-all duration-200 cursor-default"
                   >
-                    <div className="flex items-center px-4 py-2.5 rounded-lg hover:bg-light-accent/5 dark:hover:bg-dark-accent/5 transition-all duration-300">
-                      <span className="text-lg text-light-accent/70 dark:text-dark-accent/70 mr-2 group-hover:text-light-accent dark:group-hover:text-dark-accent transition-colors duration-300">›</span>
-                      <span className="text-base font-medium text-light-textSecondary dark:text-dark-textSecondary group-hover:text-light-accent dark:group-hover:text-dark-accent transition-colors duration-300">
-                        {skill}
-                      </span>
-                    </div>
-                  </motion.div>
+                    {skill}
+                  </span>
                 ))}
               </div>
             </motion.div>

@@ -1,9 +1,51 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FiGithub, FiLinkedin, FiMail, FiMapPin } from 'react-icons/fi'
 import { useTheme } from './ThemeProvider'
 
+const TITLES = [
+  "Full Stack Software Engineer",
+  "Backend Engineer · Java & Spring Boot",
+  "Cloud-Native Developer · AWS & Kubernetes"
+]
+
+const TECH_STACK = [
+  "Java", "Spring Boot", "React", "TypeScript", "AWS", "Docker", "Kubernetes", "PostgreSQL"
+]
+
+const useTypewriter = (texts) => {
+  const [displayText, setDisplayText] = useState('')
+  const [titleIndex, setTitleIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const currentTitle = texts[titleIndex]
+    let timeout
+
+    if (!isDeleting && displayText === currentTitle) {
+      timeout = setTimeout(() => setIsDeleting(true), 2000)
+    } else if (isDeleting && displayText === '') {
+      setIsDeleting(false)
+      setTitleIndex((prev) => (prev + 1) % texts.length)
+    } else if (!isDeleting) {
+      timeout = setTimeout(() => {
+        setDisplayText(currentTitle.slice(0, displayText.length + 1))
+      }, 80)
+    } else {
+      timeout = setTimeout(() => {
+        setDisplayText(currentTitle.slice(0, displayText.length - 1))
+      }, 45)
+    }
+
+    return () => clearTimeout(timeout)
+  }, [displayText, isDeleting, titleIndex, texts])
+
+  return displayText
+}
+
 const Hero = () => {
-  const { isDark } = useTheme();
+  const { isDark } = useTheme()
+  const typewriterText = useTypewriter(TITLES)
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -14,8 +56,8 @@ const Hero = () => {
 
       {/* Grid Pattern */}
       <div className="absolute inset-0" style={{
-        backgroundImage: isDark 
-          ? 'radial-gradient(circle at 1px 1px, rgba(203, 213, 225, 0.1) 1px, transparent 0)' 
+        backgroundImage: isDark
+          ? 'radial-gradient(circle at 1px 1px, rgba(203, 213, 225, 0.1) 1px, transparent 0)'
           : 'radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.1) 1px, transparent 0)',
         backgroundSize: '40px 40px'
       }} />
@@ -43,19 +85,20 @@ const Hero = () => {
             className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-center mb-6"
           >
             <span className="bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent">
-              Satyanarayana Torati
+              Satyanarayana &ldquo;Satya&rdquo; Torati
             </span>
           </motion.h1>
 
-          {/* Title */}
+          {/* Typewriter Title */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center mb-8"
+            className="text-center mb-8 h-12 flex items-center justify-center"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display text-light-text dark:text-dark-text">
-              Software Engineer 
+              {typewriterText}
+              <span className="inline-block w-0.5 h-8 bg-light-accent dark:bg-dark-accent ml-1 animate-pulse align-middle" />
             </h2>
           </motion.div>
 
@@ -64,10 +107,30 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg sm:text-xl text-center text-light-textSecondary dark:text-dark-textSecondary mb-12 max-w-2xl mx-auto font-medium"
+            className="text-lg sm:text-xl text-center text-light-textSecondary dark:text-dark-textSecondary mb-8 max-w-2xl mx-auto font-medium"
           >
-            Software Engineer with 3+ years of experience designing, developing, and deploying scalable backend and full-stack applications using Java (Spring Boot), Python (Flask/FastAPI), JavaScript/TypeScript, and AWS. Strong background in microservices architecture, REST/GraphQL APIs, distributed systems, and cloud-native deployments. Proven ability to deliver secure, high-performance systems with OAuth2/JWT, CI/CD automation, Docker, Kubernetes, and modern engineering practices.
+            Full Stack Software Engineer with 3+ years of experience building scalable
+            backend systems and cloud-native applications at MetLife and Accenture.
+            Specialized in Java (Spring Boot), React, and AWS — with a growing focus
+            on AI-integrated systems.
           </motion.p>
+
+          {/* Tech Stack Badges */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            className="flex flex-wrap justify-center gap-2 mb-10"
+          >
+            {TECH_STACK.map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 text-sm font-medium rounded-md bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border text-light-textSecondary dark:text-dark-textSecondary hover:border-light-accent dark:hover:border-dark-accent hover:text-light-accent dark:hover:text-dark-accent transition-all duration-200"
+              >
+                {tech}
+              </span>
+            ))}
+          </motion.div>
 
           {/* Buttons */}
           <motion.div

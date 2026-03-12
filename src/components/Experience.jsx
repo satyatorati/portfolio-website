@@ -1,12 +1,31 @@
 import { motion } from 'framer-motion'
 
+const CompanyLogo = ({ src, alt, fallback }) => (
+  <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center border border-light-border dark:border-dark-border overflow-hidden flex-shrink-0 shadow-sm">
+    <img
+      src={src}
+      alt={alt}
+      style={{ maxHeight: '40px', objectFit: 'contain' }}
+      onError={(e) => {
+        e.target.style.display = 'none'
+        e.target.nextSibling.style.display = 'flex'
+      }}
+    />
+    <span
+      className="text-2xl font-bold text-light-accent dark:text-dark-accent hidden w-full h-full items-center justify-center"
+    >
+      {fallback}
+    </span>
+  </div>
+)
+
 const Experience = () => {
   return (
     <section id="experience" className="py-20">
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.05 }}
         transition={{ duration: 0.5 }}
         className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
@@ -19,15 +38,15 @@ const Experience = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="flex items-start space-x-6"
           >
-            <div className="flex-shrink-0">
-              <div className="w-16 h-16 bg-light-accent/10 dark:bg-dark-accent/10 rounded-lg flex items-center justify-center">
-                <span className="text-2xl font-bold text-light-accent dark:text-dark-accent">M</span>
-              </div>
-            </div>
+            <CompanyLogo
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/MetLife_logo_%282015%29.svg/320px-MetLife_logo_%282015%29.svg.png"
+              alt="MetLife Logo"
+              fallback="M"
+            />
             <div>
               <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">MetLife</h3>
               <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Software Engineer</p>
@@ -45,17 +64,15 @@ const Experience = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
             className="flex items-start space-x-6"
           >
-            <div className="flex-shrink-0">
-              <img 
-                src="/assets/accenture.png" 
-                alt="Accenture Logo" 
-                className="w-16 h-16 object-contain"
-              />
-            </div>
+            <CompanyLogo
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/320px-Accenture.svg.png"
+              alt="Accenture Logo"
+              fallback="A"
+            />
             <div>
               <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">Accenture</h3>
               <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Software Engineer</p>
@@ -63,7 +80,7 @@ const Experience = () => {
               <ul className="list-disc list-inside text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80 space-y-3 mt-4">
                 <li>💡 Built full-stack features using Java Spring Boot backend and React.js frontend; developed and optimized RESTful APIs for secure data exchange in enterprise applications</li>
                 <li>⚡ Designed and delivered scalable application solutions by translating business requirements into technical implementations for a high-traffic eCommerce platform</li>
-                <li>🚀 Resolved 250+ production issues across frontend & backend systems, maintaining 99.9% uptime & stable order processing</li>
+                <li>🚀 Resolved 250+ production issues across frontend &amp; backend systems, maintaining 99.9% uptime &amp; stable order processing</li>
                 <li>🔐 Implemented authentication and authorization using Spring Security, OAuth2, and JWT, ensuring enterprise-grade security for client data</li>
                 <li>🔄 Automated deployment pipelines with Docker and Jenkins, supporting faster releases and reducing manual deployment errors</li>
                 <li>🧪 Performed unit and integration testing with JUnit and Postman, helping maintain code reliability and high test coverage</li>
@@ -76,15 +93,15 @@ const Experience = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="flex items-start space-x-6"
           >
-            <div className="flex-shrink-0">
-              <div className="w-16 h-16 bg-light-accent/10 dark:bg-dark-accent/10 rounded-lg flex items-center justify-center">
-                <span className="text-2xl font-bold text-light-accent dark:text-dark-accent">M</span>
-              </div>
-            </div>
+            <CompanyLogo
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Mphasis_logo.svg/320px-Mphasis_logo.svg.png"
+              alt="Mphasis Logo"
+              fallback="M"
+            />
             <div>
               <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">Mphasis</h3>
               <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Jr Software Engineer</p>
