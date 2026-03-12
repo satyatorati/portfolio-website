@@ -3,11 +3,10 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import CurrentlyBuilding from './components/CurrentlyBuilding'
 import About from './components/About'
-import Education from './components/Education'
-import Certifications from './components/Certifications'
-import Skills from './components/Skills'
-import Experience from './components/Experience'
 import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Skills from './components/Skills'
+import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -54,11 +53,10 @@ function App() {
             <div className="section-container">
               <CurrentlyBuilding />
               <About />
-              <Education />
-              <Certifications />
-              <Skills />
-              <Experience />
               <Projects />
+              <Experience />
+              <Skills />
+              <Education />
               <Contact />
             </div>
           </main>
