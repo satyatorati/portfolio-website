@@ -1,23 +1,24 @@
 import { motion } from 'framer-motion'
+import { FiServer, FiZap, FiCpu } from 'react-icons/fi'
 
 const cards = [
   {
-    icon: '🏗️',
+    Icon: FiServer,
     title: 'Scalable Backend Systems',
     description:
-      '5+ production microservices at MetLife serving financial data for thousands of users. Expertise in Java, Spring Boot, and distributed architecture.',
+      'Built and maintained production microservices at MetLife serving financial data for thousands of daily users. Deep expertise in Java 17, Spring Boot, and distributed architecture.',
   },
   {
-    icon: '⚡',
-    title: 'Performance-Driven Engineering',
+    Icon: FiZap,
+    title: 'Performance & Reliability',
     description:
-      'Reduced manual errors by 25% at MetLife. Maintained 99.9% uptime at Accenture across 250+ resolved production incidents.',
+      'Resolved 250+ production incidents at Accenture maintaining 99.9% uptime. Reduced synchronization errors by 25% at MetLife through automation.',
   },
   {
-    icon: '🤖',
-    title: 'AI-Integrated Development',
+    Icon: FiCpu,
+    title: 'AI-Integrated Engineering',
     description:
-      'Building LLM-powered tools with LangChain, AWS Bedrock, and OpenAI. From RAG pipelines to AI-enhanced user experiences.',
+      'Building LLM-powered tools with LangChain and AWS Bedrock. From RAG pipelines to OpenAI-integrated user experiences.',
   },
 ]
 
@@ -46,10 +47,12 @@ const WhatIBring = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl p-6 border border-light-border dark:border-dark-border hover:shadow-glow transition-all duration-300"
+            transition={{ duration: 0.4, delay: index * 0.08 }}
+            className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl p-6 border border-light-border dark:border-dark-border hover:border-light-accent/40 dark:hover:border-dark-accent/40 hover:shadow-glow transition-all duration-300"
           >
-            <div className="text-4xl mb-4">{card.icon}</div>
+            <div className="w-10 h-10 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center mb-4">
+              <card.Icon className="w-5 h-5 text-light-accent dark:text-dark-accent" />
+            </div>
             <h3 className="text-lg font-bold text-light-text dark:text-dark-text mb-2">
               {card.title}
             </h3>

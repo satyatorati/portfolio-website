@@ -60,7 +60,7 @@ const Skills = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.05 }}
+        viewport={{ once: true, amount: 0 }}
         transition={{ duration: 0.5 }}
         className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
@@ -74,8 +74,8 @@ const Skills = () => {
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
-              transition={{ duration: 0.5, delay: Math.min(index * 0.08, 0.2) }}
+              viewport={{ once: true, amount: 0 }}
+              transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.05) }}
               className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl p-6 border border-light-border dark:border-dark-border hover:shadow-glow transition-all duration-300"
             >
               <div className="flex items-center space-x-3 mb-6">

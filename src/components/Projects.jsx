@@ -80,7 +80,7 @@ const Projects = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ once: true, amount: 0 }}
           transition={{ duration: 0.5 }}
           className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
         >
@@ -91,7 +91,7 @@ const Projects = () => {
           className="flex justify-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ once: true, amount: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <div className="flex flex-wrap justify-center gap-3">
@@ -117,7 +117,7 @@ const Projects = () => {
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
+              viewport={{ once: true, amount: 0 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
               className="relative bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl overflow-hidden border border-light-border dark:border-dark-border hover:shadow-glow transition-all duration-300 flex flex-col"
             >

@@ -6,7 +6,7 @@ const Education = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.05 }}
+        viewport={{ once: true, amount: 0 }}
         transition={{ duration: 0.5 }}
         className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
@@ -18,7 +18,7 @@ const Education = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex items-start space-x-4"
           >
@@ -40,7 +40,7 @@ const Education = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
             className="flex items-start space-x-4"
           >

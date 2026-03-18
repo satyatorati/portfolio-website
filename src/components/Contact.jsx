@@ -7,7 +7,7 @@ const Contact = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.05 }}
+        viewport={{ once: true, amount: 0 }}
         transition={{ duration: 0.5 }}
         className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
@@ -19,7 +19,7 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5 }}
             className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl p-8 border border-light-border dark:border-dark-border"
           >
@@ -80,7 +80,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.05 }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="flex items-start space-x-4"
               >
@@ -101,7 +101,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.05 }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="flex items-start space-x-4"
               >
@@ -119,7 +119,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.05 }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="flex items-start space-x-4"
               >
@@ -142,7 +142,7 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm rounded-xl p-8 border border-light-border dark:border-dark-border"
           >
@@ -155,7 +155,7 @@ const Contact = () => {
                 className="flex items-center space-x-4 group"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.05 }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-light-accent/20 dark:group-hover:bg-dark-accent/20 transition-colors duration-300">
@@ -176,7 +176,7 @@ const Contact = () => {
                 className="flex items-center space-x-4 group"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.05 }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-light-accent/20 dark:group-hover:bg-dark-accent/20 transition-colors duration-300">

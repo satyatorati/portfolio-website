@@ -83,29 +83,11 @@ const Navbar = () => {
                 </motion.li>
               ))}
 
-              {/* Schedule a Call button */}
-              <motion.li
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
-              >
-                <a
-                  href="https://calendly.com/satyatorati5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-highlight text-highlight hover:bg-highlight hover:text-white transition-all duration-200 text-sm font-semibold"
-                >
-                  <span className="pulse-dot" style={{ width: '7px', height: '7px', marginRight: '4px' }} />
-                  <span className="hidden sm:inline">Schedule a Call</span>
-                  <span className="sm:hidden">📅</span>
-                </a>
-              </motion.li>
-
               {/* Resume button */}
               <motion.li
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: (navLinks.length + 1) * 0.1 }}
+                transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
               >
                 <a
                   href="https://drive.google.com/file/d/1d6PjnwLmP1C7sGzhow6BjXvTzZ-uOr_9/view?usp=drive_link"
@@ -157,17 +139,6 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <li>
-                <a
-                  href="https://calendly.com/satyatorati5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-highlight text-highlight hover:bg-highlight hover:text-white transition-all duration-200 text-sm font-semibold"
-                  onClick={() => setIsOpen(false)}
-                >
-                  📅 Schedule a Call
-                </a>
-              </li>
               <li>
                 <a
                   href="https://drive.google.com/file/d/1YxuNu_QwBktfsJq1nODrt3TNJwtd5veX/view?usp=drive_link"

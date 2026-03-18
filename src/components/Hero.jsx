@@ -43,68 +43,12 @@ const useTypewriter = (texts) => {
   return displayText
 }
 
-// Animated counter hook — starts immediately on mount
-const useCounter = (target, duration = 1500, decimals = 0) => {
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    const steps = 60
-    const stepDuration = duration / steps
-    let current = 0
-
-    const timer = setInterval(() => {
-      current += target / steps
-      if (current >= target) {
-        setCount(target)
-        clearInterval(timer)
-      } else {
-        setCount(decimals > 0 ? Math.round(current * 10) / 10 : Math.floor(current))
-      }
-    }, stepDuration)
-
-    return () => clearInterval(timer)
-  }, [target, duration, decimals])
-
-  return count
-}
-
-const MetricCard = ({ value, label, suffix = '' }) => (
-  <div style={{
-    background: 'rgba(30, 41, 59, 0.7)',
-    border: '1px solid rgba(96, 165, 250, 0.2)',
-    borderRadius: '12px',
-    padding: '16px 24px',
-    textAlign: 'center',
-    minWidth: '110px',
-  }}>
-    <div style={{
-      fontSize: '1.75rem',
-      fontWeight: 700,
-      color: '#00b4d8',
-      lineHeight: 1.1,
-    }}>
-      {value}{suffix}
-    </div>
-    <div style={{
-      fontSize: '0.75rem',
-      color: '#94a3b8',
-      marginTop: '4px',
-    }}>
-      {label}
-    </div>
-  </div>
-)
-
 const Hero = () => {
   const { isDark } = useTheme()
   const typewriterText = useTypewriter(TITLES)
 
-  const yearsCount = useCounter(3, 1500)
-  const usersCount = useCounter(500, 1500)
-  const uptimeCount = useCounter(99.9, 1500, 1)
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-mesh dark:opacity-20 opacity-40" />
       <div className="absolute w-[500px] h-[500px] bg-highlight/30 dark:bg-highlight/10 rounded-full blur-3xl top-1/4 -right-48 animate-float" />
@@ -118,16 +62,16 @@ const Hero = () => {
         backgroundSize: '40px 40px'
       }} />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-8">
         <div className="max-w-4xl mx-auto">
           {/* Location Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-8"
+            className="text-center mb-6"
           >
-            <div className="inline-flex items-center space-x-2 bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-light-border dark:border-dark-border">
+            <div className="inline-flex items-center space-x-2 bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm px-4 py-2 rounded-full border border-light-border dark:border-dark-border">
               <FiMapPin className="text-light-accent dark:text-dark-accent" />
               <span className="text-light-text dark:text-dark-text font-mono">New York, USA</span>
             </div>
@@ -138,10 +82,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-center mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-center mb-6 leading-tight"
           >
             <span className="bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent">
-              Satyanarayana &ldquo;Satya&rdquo; Torati
+              Satyanarayana &ldquo;Satya&rdquo;<br />Torati
             </span>
           </motion.h1>
 
@@ -150,11 +94,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center mb-8 h-12 flex items-center justify-center"
+            className="text-center mb-6 h-12 flex items-center justify-center"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display text-light-text dark:text-dark-text">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-display text-light-text dark:text-dark-text">
               {typewriterText}
-              <span className="inline-block w-0.5 h-8 bg-light-accent dark:bg-dark-accent ml-1 animate-pulse align-middle" />
+              <span className="inline-block w-0.5 h-7 bg-light-accent dark:bg-dark-accent ml-1 animate-pulse align-middle" />
             </h2>
           </motion.div>
 
@@ -163,7 +107,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg sm:text-xl text-center text-light-textSecondary dark:text-dark-textSecondary mb-8 max-w-2xl mx-auto font-medium"
+            className="text-base sm:text-lg text-center text-light-textSecondary dark:text-dark-textSecondary mb-7 max-w-2xl mx-auto font-medium"
           >
             Full Stack Software Engineer with 3+ years of experience building scalable
             backend systems and cloud-native applications at MetLife and Accenture.
@@ -188,24 +132,12 @@ const Hero = () => {
             ))}
           </motion.div>
 
-          {/* Live Metrics Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex justify-center gap-4 mb-10 flex-wrap"
-          >
-            <MetricCard value={yearsCount} suffix="+" label="Years Exp." />
-            <MetricCard value={usersCount} suffix="+" label="Daily Users" />
-            <MetricCard value={uptimeCount} suffix="%" label="Uptime" />
-          </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.45 }}
-            className="flex flex-col items-center gap-4 mb-12"
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex flex-col items-center gap-4 mb-10"
           >
             {/* Primary: Schedule a Call */}
             <a
@@ -255,11 +187,6 @@ const Hero = () => {
                 Get in Touch
               </a>
             </div>
-
-            {/* Hint text */}
-            <p style={{ fontSize: '0.75rem', color: '#6b7280', textAlign: 'center', marginTop: '2px' }}>
-              Free 30-min intro call · No commitment
-            </p>
           </motion.div>
 
           {/* Social Links */}

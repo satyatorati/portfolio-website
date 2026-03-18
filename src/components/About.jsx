@@ -7,7 +7,7 @@ const About = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.05 }}
+        viewport={{ once: true, amount: 0 }}
         transition={{ duration: 0.5 }}
         className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
@@ -18,7 +18,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ once: true, amount: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="md:col-span-3"
         >
@@ -54,35 +54,16 @@ const About = () => {
             and contributing to open-source Java projects.
           </p>
 
-          <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg mb-8">
+          <p className="text-light-textSecondary dark:text-dark-textSecondary text-lg">
             I&apos;m open to full-time Software Engineering roles in the US — backend,
             full-stack, or platform engineering.
           </p>
-
-          {/* GitHub Stats */}
-          <div>
-            <p className="text-xs text-light-textSecondary/60 dark:text-dark-textSecondary/60 uppercase tracking-widest mb-3 font-mono">
-              GitHub Activity
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <img
-                src="https://github-readme-stats.vercel.app/api?username=satyatorati&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00b4d8&icon_color=00b4d8&text_color=8b949e"
-                alt="Satya's GitHub Stats"
-                style={{ maxWidth: '400px', borderRadius: '8px', width: '100%' }}
-              />
-              <img
-                src="https://github-readme-stats.vercel.app/api/top-langs/?username=satyatorati&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00b4d8&text_color=8b949e"
-                alt="Top Languages"
-                style={{ maxWidth: '300px', borderRadius: '8px', width: '100%' }}
-              />
-            </div>
-          </div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ once: true, amount: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="md:col-span-2 relative"
         >
