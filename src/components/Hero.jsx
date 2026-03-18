@@ -43,9 +43,65 @@ const useTypewriter = (texts) => {
   return displayText
 }
 
+// Animated counter hook — starts immediately on mount
+const useCounter = (target, duration = 1500, decimals = 0) => {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    const steps = 60
+    const stepDuration = duration / steps
+    let current = 0
+
+    const timer = setInterval(() => {
+      current += target / steps
+      if (current >= target) {
+        setCount(target)
+        clearInterval(timer)
+      } else {
+        setCount(decimals > 0 ? Math.round(current * 10) / 10 : Math.floor(current))
+      }
+    }, stepDuration)
+
+    return () => clearInterval(timer)
+  }, [target, duration, decimals])
+
+  return count
+}
+
+const MetricCard = ({ value, label, suffix = '' }) => (
+  <div style={{
+    background: 'rgba(30, 41, 59, 0.7)',
+    border: '1px solid rgba(96, 165, 250, 0.2)',
+    borderRadius: '12px',
+    padding: '16px 24px',
+    textAlign: 'center',
+    minWidth: '110px',
+  }}>
+    <div style={{
+      fontSize: '1.75rem',
+      fontWeight: 700,
+      color: '#00b4d8',
+      lineHeight: 1.1,
+    }}>
+      {value}{suffix}
+    </div>
+    <div style={{
+      fontSize: '0.75rem',
+      color: '#94a3b8',
+      marginTop: '4px',
+    }}>
+      {label}
+    </div>
+  </div>
+)
+
 const Hero = () => {
   const { isDark } = useTheme()
   const typewriterText = useTypewriter(TITLES)
+
+  const yearsCount = useCounter(3, 1500)
+  const usersCount = useCounter(500, 1500)
+  const uptimeCount = useCounter(99.9, 1500, 1)
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -120,7 +176,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            className="flex flex-wrap justify-center gap-2 mb-10"
+            className="flex flex-wrap justify-center gap-2 mb-8"
           >
             {TECH_STACK.map((tech) => (
               <span
@@ -132,25 +188,78 @@ const Hero = () => {
             ))}
           </motion.div>
 
-          {/* Buttons */}
+          {/* Live Metrics Row */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+            className="flex justify-center gap-4 mb-10 flex-wrap"
           >
+            <MetricCard value={yearsCount} suffix="+" label="Years Exp." />
+            <MetricCard value={usersCount} suffix="+" label="Daily Users" />
+            <MetricCard value={uptimeCount} suffix="%" label="Uptime" />
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.45 }}
+            className="flex flex-col items-center gap-4 mb-12"
+          >
+            {/* Primary: Schedule a Call */}
             <a
-              href="#projects"
-              className="px-8 py-3 bg-gradient-to-r from-light-accent to-highlight dark:from-dark-accent dark:to-highlight text-white rounded-lg font-semibold hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1"
+              href="https://calendly.com/satyatorati5"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minWidth: '260px',
+                padding: '14px 36px',
+                background: 'linear-gradient(135deg, #00b4d8, #0077b6)',
+                color: '#fff',
+                fontWeight: 700,
+                fontSize: '1.05rem',
+                borderRadius: '50px',
+                boxShadow: '0 0 24px rgba(0, 180, 216, 0.45)',
+                textDecoration: 'none',
+                transition: 'box-shadow 200ms ease, transform 200ms ease',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.boxShadow = '0 0 36px rgba(0, 180, 216, 0.7)'
+                e.currentTarget.style.transform = 'scale(1.03)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.boxShadow = '0 0 24px rgba(0, 180, 216, 0.45)'
+                e.currentTarget.style.transform = 'scale(1)'
+              }}
             >
-              View My Work
+              <span className="pulse-dot" />
+              Schedule a Call
             </a>
-            <a
-              href="#contact"
-              className="px-8 py-3 bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm text-light-text dark:text-dark-text rounded-lg font-semibold hover:bg-light-accent/10 dark:hover:bg-dark-accent/10 border border-light-border dark:border-dark-border transition-all duration-300 transform hover:-translate-y-1"
-            >
-              Get in Touch
-            </a>
+
+            {/* Secondary buttons row */}
+            <div className="flex flex-wrap justify-center gap-3">
+              <a
+                href="#projects"
+                className="px-6 py-2.5 bg-gradient-to-r from-light-accent to-highlight dark:from-dark-accent dark:to-highlight text-white rounded-lg font-semibold hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1 text-sm"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                className="px-6 py-2.5 bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-sm text-light-text dark:text-dark-text rounded-lg font-semibold hover:bg-light-accent/10 dark:hover:bg-dark-accent/10 border border-light-border dark:border-dark-border transition-all duration-300 transform hover:-translate-y-1 text-sm"
+              >
+                Get in Touch
+              </a>
+            </div>
+
+            {/* Hint text */}
+            <p style={{ fontSize: '0.75rem', color: '#6b7280', textAlign: 'center', marginTop: '2px' }}>
+              Free 30-min intro call · No commitment
+            </p>
           </motion.div>
 
           {/* Social Links */}

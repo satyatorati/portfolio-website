@@ -42,7 +42,7 @@ const Projects = () => {
       metrics: "10,000+ jobs/hour · 99.9% completion rate · <100ms queue latency",
       image: null,
       tags: ["Java", "Spring Boot", "Apache Kafka", "PostgreSQL", "React", "Docker", "AWS ECS", "Redis"],
-      github: "#",
+      github: "https://github.com/satyatorati/task-queue-system",
       demo: null,
       category: "backend",
       categoryLabel: "Backend / System Design",

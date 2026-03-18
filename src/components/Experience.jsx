@@ -1,21 +1,20 @@
 import { motion } from 'framer-motion'
 
-const CompanyLogo = ({ src, alt, fallback }) => (
-  <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center border border-light-border dark:border-dark-border overflow-hidden flex-shrink-0 shadow-sm">
-    <img
-      src={src}
-      alt={alt}
-      style={{ maxHeight: '40px', objectFit: 'contain' }}
-      onError={(e) => {
-        e.target.style.display = 'none'
-        e.target.nextSibling.style.display = 'flex'
-      }}
-    />
-    <span
-      className="text-2xl font-bold text-light-accent dark:text-dark-accent hidden w-full h-full items-center justify-center"
-    >
-      {fallback}
-    </span>
+const MetLifeLogo = () => (
+  <div style={{ width: 52, height: 52, background: '#fff', borderRadius: 8, padding: 8, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #e2e8f0', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
+    <span style={{ color: '#0A5EC0', fontWeight: 700, fontSize: 13, lineHeight: 1.2, textAlign: 'center' }}>MetLife</span>
+  </div>
+)
+
+const AccentureLogo = () => (
+  <div style={{ width: 52, height: 52, background: '#fff', borderRadius: 8, padding: 6, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #e2e8f0', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
+    <span style={{ color: '#A100FF', fontWeight: 700, fontSize: 11, lineHeight: 1.2, textAlign: 'center' }}>Accenture</span>
+  </div>
+)
+
+const MphasisLogo = () => (
+  <div style={{ width: 52, height: 52, background: '#fff', borderRadius: 8, padding: 6, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #e2e8f0', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
+    <span style={{ color: '#0066CC', fontWeight: 700, fontSize: 12, lineHeight: 1.2, textAlign: 'center' }}>Mphasis</span>
   </div>
 )
 
@@ -25,7 +24,7 @@ const Experience = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.05 }}
+        viewport={{ once: true, amount: 0 }}
         transition={{ duration: 0.5 }}
         className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-light-text via-light-accent to-highlight dark:from-dark-text dark:via-dark-accent dark:to-highlight bg-clip-text text-transparent"
       >
@@ -38,15 +37,11 @@ const Experience = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex items-start space-x-6"
           >
-            <CompanyLogo
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/MetLife_logo_%282015%29.svg/320px-MetLife_logo_%282015%29.svg.png"
-              alt="MetLife Logo"
-              fallback="M"
-            />
+            <MetLifeLogo />
             <div>
               <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">MetLife</h3>
               <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Software Engineer</p>
@@ -64,15 +59,11 @@ const Experience = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
             className="flex items-start space-x-6"
           >
-            <CompanyLogo
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/320px-Accenture.svg.png"
-              alt="Accenture Logo"
-              fallback="A"
-            />
+            <AccentureLogo />
             <div>
               <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">Accenture</h3>
               <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Software Engineer</p>
@@ -93,15 +84,11 @@ const Experience = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex items-start space-x-6"
           >
-            <CompanyLogo
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Mphasis_logo.svg/320px-Mphasis_logo.svg.png"
-              alt="Mphasis Logo"
-              fallback="M"
-            />
+            <MphasisLogo />
             <div>
               <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">Mphasis</h3>
               <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Jr Software Engineer</p>

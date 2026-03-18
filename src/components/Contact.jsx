@@ -26,25 +26,54 @@ const Contact = () => {
             <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-6">Let&apos;s Connect</h3>
             <div className="space-y-6">
 
-              {/* Calendly — first */}
+              {/* Calendly — featured card */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.05 }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="flex items-start space-x-4"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(0,180,216,0.08), rgba(0,119,182,0.08))',
+                  border: '1px solid rgba(0,180,216,0.4)',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  boxShadow: '0 0 20px rgba(0,180,216,0.12)',
+                }}
               >
-                <div className="w-12 h-12 rounded-lg bg-light-accent/10 dark:bg-dark-accent/10 flex items-center justify-center flex-shrink-0">
-                  <FiCalendar className="w-6 h-6 text-light-accent dark:text-dark-accent" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold text-light-text dark:text-dark-text mb-1">Schedule a Call</h4>
-                  <a
-                    href="https://calendly.com/satyatorati5/30min"
-                    className="text-lg text-light-textSecondary dark:text-dark-textSecondary hover:text-light-accent dark:hover:text-dark-accent transition-colors duration-300"
-                  >
-                    Book a 30-min chat →
-                  </a>
+                <div className="flex items-start space-x-4">
+                  <div className="relative w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{ background: 'rgba(0,180,216,0.15)' }}>
+                    <FiCalendar className="w-6 h-6" style={{ color: '#00b4d8' }} />
+                    <span className="pulse-dot absolute -top-1 -right-1" style={{ width: '8px', height: '8px', margin: 0 }} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-semibold text-light-text dark:text-dark-text mb-1">
+                      📅 Book a 30-min Intro Call
+                    </h4>
+                    <p className="text-sm text-light-textSecondary dark:text-dark-textSecondary mb-3">
+                      Let&apos;s talk about your engineering needs
+                    </p>
+                    <a
+                      href="https://calendly.com/satyatorati5"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'inline-block',
+                        padding: '8px 20px',
+                        background: 'linear-gradient(135deg, #00b4d8, #0077b6)',
+                        color: '#fff',
+                        fontWeight: 600,
+                        fontSize: '0.875rem',
+                        borderRadius: '8px',
+                        textDecoration: 'none',
+                        transition: 'opacity 200ms',
+                      }}
+                      onMouseEnter={e => e.currentTarget.style.opacity = '0.85'}
+                      onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+                    >
+                      Book Now →
+                    </a>
+                  </div>
                 </div>
               </motion.div>
 

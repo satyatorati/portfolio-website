@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin, FiTwitter, FiHeart } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiHeart } from 'react-icons/fi'
 
 const Footer = () => {
   return (
@@ -12,15 +12,12 @@ const Footer = () => {
             <a href="https://www.linkedin.com/in/satya-torati/" target="_blank" rel="noopener noreferrer" className="text-textSecondary hover:text-secondary transition-colors">
               <FiLinkedin size={20} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-textSecondary hover:text-secondary transition-colors">
-              <FiTwitter size={20} />
-            </a>
           </div>
-          
+
           <p className="text-textSecondary text-center flex items-center">
-            Designed & Built with <FiHeart className="text-secondary mx-1" /> by Satya Torati
+            Designed &amp; Built with <FiHeart className="text-secondary mx-1" /> by Satya Torati
           </p>
-          
+
           <p className="text-textSecondary text-sm mt-2">
             © {new Date().getFullYear()} All Rights Reserved
           </p>

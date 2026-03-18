@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import CurrentlyBuilding from './components/CurrentlyBuilding'
+import WhatIBring from './components/WhatIBring'
 import About from './components/About'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
+import NumbersBar from './components/NumbersBar'
 import Skills from './components/Skills'
 import Education from './components/Education'
 import Contact from './components/Contact'
@@ -16,7 +18,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false)
     }, 1000)
@@ -49,12 +50,18 @@ function App() {
         <div className="min-h-screen bg-light-primary dark:bg-dark-primary text-light-text dark:text-dark-text">
           <Navbar />
           <main className="relative">
-            <Hero />
+            <section id="home">
+              <Hero />
+            </section>
             <div className="section-container">
               <CurrentlyBuilding />
+              <WhatIBring />
               <About />
               <Projects />
               <Experience />
+            </div>
+            <NumbersBar />
+            <div className="section-container">
               <Skills />
               <Education />
               <Contact />
