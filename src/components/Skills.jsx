@@ -6,47 +6,47 @@ const Skills = () => {
     {
       title: "Languages",
       icon: FiCode,
-      skills: ["Java 17", "TypeScript", "JavaScript (ES6+)", "SQL", "Python"]
+      skills: ["Java 17", "Python", "TypeScript", "JavaScript (ES6+)", "SQL"]
     },
     {
       title: "Frontend",
       icon: FiCode,
-      skills: ["React.js", "Angular", "Redux", "HTML5", "CSS3", "Tailwind CSS", "Responsive UI Development"]
+      skills: ["React.js", "Angular", "Redux", "HTML5", "CSS3", "Tailwind CSS", "Responsive & Accessible UI Development"]
     },
     {
       title: "Backend & Frameworks",
       icon: FiServer,
-      skills: ["Spring Boot", "Spring Security", "REST & GraphQL APIs", "Flask", "FastAPI", "Microservices Architecture", "Event-Driven Systems", "Redis", "Kafka"]
+      skills: ["Spring Boot", "Spring Security", "REST APIs", "GraphQL", "Flask", "FastAPI", "Microservices Architecture", "Event-Driven Systems", "Kafka", "Redis"]
     },
     {
       title: "Cloud & DevOps",
       icon: FiDatabase,
-      skills: ["AWS (EC2, S3, Lambda, API Gateway)", "Docker", "Kubernetes", "Jenkins", "GitHub Actions", "CI/CD Pipelines"]
+      skills: ["AWS (EC2, S3, Lambda, API Gateway)", "Docker", "Kubernetes", "Jenkins", "GitHub Actions", "CI/CD Pipeline Automation"]
     },
     {
       title: "Databases",
       icon: FiDatabase,
-      skills: ["PostgreSQL", "MySQL", "MongoDB", "Database Design", "Query Optimization", "Transactions"]
+      skills: ["PostgreSQL", "MySQL", "MongoDB", "Schema Design", "Query Optimization", "Transaction Management"]
     },
     {
       title: "Security",
       icon: FiTool,
-      skills: ["OAuth2", "JWT Authentication", "Spring Security", "Secure API Design"]
+      skills: ["OAuth2", "JWT", "Spring Security", "Role-Based Access Control", "Secure API Design"]
     },
     {
-      title: "AI & Machine Learning",
+      title: "AI / GenAI",
       icon: FiCpu,
-      skills: ["LangChain", "OpenAI API (GPT-4)", "AWS Bedrock", "RAG (Retrieval-Augmented Generation)", "Vector Databases (Pinecone)", "Prompt Engineering", "Hugging Face"]
+      skills: ["AWS Bedrock", "OpenAI API", "LangChain", "Prompt Engineering", "Retrieval-Augmented Generation", "Vector Databases", "LLM Integration"]
     },
     {
       title: "Testing",
       icon: FiTool,
-      skills: ["JUnit", "Mockito", "Postman", "Unit & Integration Testing"]
+      skills: ["JUnit", "Mockito", "Postman", "Unit & Integration Testing", "Test Coverage Optimization"]
     },
     {
       title: "Tools & Practices",
       icon: FiTool,
-      skills: ["Git", "Jira", "Confluence", "Agile/Scrum", "SOLID Principles", "Clean Code"]
+      skills: ["Git", "Jira", "Confluence", "Agile/Scrum", "SOLID Principles", "Clean Code", "Code Review"]
     },
     {
       title: "Core Concepts",

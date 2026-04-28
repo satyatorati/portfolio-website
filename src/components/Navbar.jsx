@@ -90,7 +90,7 @@ const Navbar = () => {
                 transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
               >
                 <a
-                  href="https://drive.google.com/file/d/1d6PjnwLmP1C7sGzhow6BjXvTzZ-uOr_9/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1wUhryKkQuz9-UNfUGKGkY90hn5w2-Mou/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"

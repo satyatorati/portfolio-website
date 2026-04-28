@@ -6,11 +6,12 @@ import { useTheme } from './ThemeProvider'
 const TITLES = [
   "Full Stack Software Engineer",
   "Backend Engineer · Java & Spring Boot",
+  "GenAI Engineer · AWS Bedrock & LLMs",
   "Cloud-Native Developer · AWS & Kubernetes"
 ]
 
 const TECH_STACK = [
-  "Java", "Spring Boot", "React", "TypeScript", "AWS", "Docker", "Kubernetes", "PostgreSQL"
+  "Java", "Python", "Spring Boot", "React", "TypeScript", "AWS Bedrock", "Kafka", "Docker", "Kubernetes", "PostgreSQL"
 ]
 
 const useTypewriter = (texts) => {
@@ -109,10 +110,10 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-base sm:text-lg text-center text-light-textSecondary dark:text-dark-textSecondary mb-7 max-w-2xl mx-auto font-medium"
           >
-            Full Stack Software Engineer with 3+ years of experience building scalable
-            backend systems and cloud-native applications at MetLife and Accenture.
-            Specialized in Java (Spring Boot), React, and AWS — with a growing focus
-            on AI-integrated systems.
+            Software Engineer with 4+ years of experience building scalable backend,
+            full-stack, and GenAI-integrated solutions across financial and insurance
+            domains. Proficient in Java, Python, and AWS — with hands-on experience
+            integrating LLMs, AWS Bedrock, and OpenAI APIs into production systems.
           </motion.p>
 
           {/* Tech Stack Badges */}

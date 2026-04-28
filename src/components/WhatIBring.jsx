@@ -6,19 +6,19 @@ const cards = [
     Icon: FiServer,
     title: 'Scalable Backend Systems',
     description:
-      'Built and maintained production microservices at MetLife serving financial data for thousands of daily users. Deep expertise in Java 17, Spring Boot, and distributed architecture.',
+      'Designed event-driven microservices at MetLife using Java 17 and Spring Boot for financial reporting serving thousands of daily users. Deep expertise in distributed architecture, Kafka, and AWS.',
   },
   {
     Icon: FiZap,
     title: 'Performance & Reliability',
     description:
-      'Resolved 250+ production incidents at Accenture maintaining 99.9% uptime. Reduced synchronization errors by 25% at MetLife through automation.',
+      'Resolved 250+ production incidents at Accenture maintaining 99.9% uptime. Improved API response times by 35% and reduced order failures by 20% on a 10,000+ orders/day platform.',
   },
   {
     Icon: FiCpu,
     title: 'AI-Integrated Engineering',
     description:
-      'Building LLM-powered tools with LangChain and AWS Bedrock. From RAG pipelines to OpenAI-integrated user experiences.',
+      'Integrated AWS Bedrock and OpenAI APIs into production Spring Boot systems at MetLife — cutting financial data review time by 40% and enabling natural language querying of financial datasets.',
   },
 ]
 

@@ -45,12 +45,12 @@ const Experience = () => {
             <div>
               <h3 className="text-3xl font-bold text-light-text dark:text-dark-text mb-2">MetLife</h3>
               <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Software Engineer</p>
-              <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Jul 2025 – Present</p>
+              <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Feb 2025 – Present</p>
               <ul className="list-disc list-inside text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80 space-y-3 mt-4">
-                <li>💡 Developed backend microservices using Java 17 and Spring Boot to support financial reporting and asset process flows; integrated with DB2 tables for accurate data processing and compliance</li>
-                <li>⚡ Collaborated with valuation and technical teams to automate XML file generation and data loading using Java (Spring Boot) and JAXB, reducing manual synchronization errors by 25%</li>
-                <li>🚀 Developed and enhanced dynamic, responsive front-end modules using React.js, TypeScript, HTML5, and CSS3, providing an intuitive, user-friendly interface for 500+ daily active users</li>
-                <li>🔐 Implemented secure authentication and authorization using OAuth2 and JWT with Spring Security; designed and integrated role-based access control into backend services to protect application endpoints and user sessions in financial systems</li>
+                <li>🤖 Integrated AWS Bedrock Claude LLM into Spring Boot microservices and built AI-powered document processing and anomaly detection workflows, reducing manual financial data review time by 40% and improving accuracy</li>
+                <li>💡 Designed and deployed event-driven microservices using Java 17 and Spring Boot for financial reporting and asset processing, integrating DB2 and AWS S3 while ensuring regulatory compliance</li>
+                <li>⚡ Built an AI-powered internal assistant using OpenAI API, enabling natural language querying of financial datasets and reducing reporting turnaround time by 30%</li>
+                <li>🚀 Automated XML data pipelines using JAXB and developed React.js + TypeScript front-end modules for 500+ daily users, improving efficiency by 35% and reducing synchronization errors by 25%</li>
               </ul>
             </div>
           </motion.div>
@@ -69,13 +69,13 @@ const Experience = () => {
               <p className="text-xl text-light-textSecondary dark:text-dark-textSecondary">Software Engineer</p>
               <p className="text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80">Jul 2021 – Dec 2023</p>
               <ul className="list-disc list-inside text-lg text-light-textSecondary/80 dark:text-dark-textSecondary/80 space-y-3 mt-4">
-                <li>💡 Built full-stack features using Java Spring Boot backend and React.js frontend; developed and optimized RESTful APIs for secure data exchange in enterprise applications</li>
-                <li>⚡ Designed and delivered scalable application solutions by translating business requirements into technical implementations for a high-traffic eCommerce platform</li>
-                <li>🚀 Resolved 250+ production issues across frontend &amp; backend systems, maintaining 99.9% uptime &amp; stable order processing</li>
-                <li>🔐 Implemented authentication and authorization using Spring Security, OAuth2, and JWT, ensuring enterprise-grade security for client data</li>
-                <li>🔄 Automated deployment pipelines with Docker and Jenkins, supporting faster releases and reducing manual deployment errors</li>
-                <li>🧪 Performed unit and integration testing with JUnit and Postman, helping maintain code reliability and high test coverage</li>
-                <li>🤝 Participated in Agile sprints and code reviews using JIRA, contributing to faster feature delivery and improved code quality</li>
+                <li>💡 Architected and delivered full-stack features for a high-traffic eCommerce platform processing 10,000+ daily orders using Java 17, Spring Boot, and React.js, improving system reliability and reducing order failures by 20%</li>
+                <li>⚡ Designed and optimized RESTful APIs across multiple services, improving response time by 35% through efficient query design, caching strategies, and performance tuning</li>
+                <li>🔐 Implemented secure authentication and authorization using Spring Security with OAuth2 and JWT, ensuring protected access and compliance with enterprise security standards</li>
+                <li>🔄 Built automated CI/CD pipelines using Docker and Jenkins, reducing release cycles and eliminating manual deployment errors across environments</li>
+                <li>🧪 Developed comprehensive unit and integration tests using JUnit and Postman, increasing test coverage and minimizing post-release defects</li>
+                <li>🚀 Resolved 250+ critical production issues across frontend and backend systems, maintaining 99.9% uptime and ensuring uninterrupted order processing</li>
+                <li>🤝 Collaborated in Agile sprints using Jira and participated in peer code reviews, improving delivery speed and reducing technical debt</li>
               </ul>
             </div>
           </motion.div>

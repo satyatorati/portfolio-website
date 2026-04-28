@@ -27,7 +27,7 @@ const useCounter = (target, duration, decimals, start) => {
 }
 
 const stats = [
-  { value: 3, suffix: '+', label: 'Years Exp', sub: '@ US Corps' },
+  { value: 4, suffix: '+', label: 'Years Exp', sub: '@ US Corps' },
   { value: 5, suffix: '+', label: 'Enterprise Apps', sub: 'Built & Shipped' },
   { value: 250, suffix: '+', label: 'Issues Resolved', sub: '@ Accenture' },
   { value: 99.9, suffix: '%', label: 'Uptime SLA', sub: 'Maintained', decimals: 1 },
